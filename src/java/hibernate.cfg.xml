@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+    <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+    <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/rbcTecnologiaDB</property>
+    <property name="hibernate.connection.username">postgres</property>
+    <property name="hibernate.connection.password">admin</property>
+    <mapping resource="co/com/virtualAsisIA/models/TemaEspecifico.hbm.xml"/>
+    <mapping resource="co/com/virtualAsisIA/models/Accion.hbm.xml"/>
+    <mapping resource="co/com/virtualAsisIA/models/ClasificacionPregunta.hbm.xml"/>
+    <mapping resource="co/com/virtualAsisIA/models/Caracterizacion.hbm.xml"/>
+    <mapping resource="co/com/virtualAsisIA/models/UnificacionAccion.hbm.xml"/>
+    <mapping resource="co/com/virtualAsisIA/models/Respuesta.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>

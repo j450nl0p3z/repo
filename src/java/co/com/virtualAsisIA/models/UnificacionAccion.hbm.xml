@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 20/11/2015 04:16:29 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="co.com.virtualAsisIA.models.UnificacionAccion" table="unificacion_accion" schema="public" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="accion" class="co.com.virtualAsisIA.models.Accion" fetch="select">
+            <column name="accion_id" />
+        </many-to-one>
+        <property name="sinonimoAccion" type="string">
+            <column name="sinonimo_accion" length="50" />
+        </property>
+    </class>
+</hibernate-mapping>

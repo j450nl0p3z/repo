@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 20/11/2015 04:16:29 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="co.com.virtualAsisIA.models.Respuesta" table="respuesta" schema="public" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="clasificacionPregunta" class="co.com.virtualAsisIA.models.ClasificacionPregunta" fetch="select">
+            <column name="cp_id" />
+        </many-to-one>
+        <property name="pregunta" type="string">
+            <column name="pregunta" length="200" />
+        </property>
+        <property name="respuesta" type="string">
+            <column name="respuesta" length="1000" />
+        </property>
+    </class>
+</hibernate-mapping>
